@@ -19,6 +19,18 @@
     <script src="lib/js/js-home.js" type="application/javascript"></script>
 	-->
     <script src="jquery.mobile-1.4.2.js"></script>
+    <script src="phonegap.js"></script>
+    <script>
+		$( document ).on( "pageinit", function( event ) {
+			if (navigator.userAgent.match(/(iPad|iPhone);.*CPU.*OS 7_\d/i)) {
+				$('.ui-page').css('marginTop','20px');
+				$('.mobile div').css({'marginTop':'20px', 'marginLeft': '-15px'});
+				$('.mobile button').css({'top':'18px', 'left': '5px'});
+				$("body").addClass("ios7");
+				$('html').append('<div id="ios7statusbar"/>');
+			}
+		});
+</script>
 <meta charset="utf-8">
 </head>
 
